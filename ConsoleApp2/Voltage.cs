@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace WorkingOnClasses
 {
+    [forVoltage]
     class Voltage : Value, IPowerable
     {
         // public float Resistence { get; set; }
         // public float Current { get; set; }
 
-        public Voltage(float Resistence, float Current)
+        public Voltage(float resistence, float current)
         {
-            this.Resistence = Resistence;
-            this.Current = Current;
+            this.resistence = resistence;
+            this.current = current;
             id = id;
         }
 
@@ -24,7 +25,8 @@ namespace WorkingOnClasses
         }
 
         // переопределение получения напряжения
-        public override float VoltageCalculation() => Resistence * Current;
+        public override float VoltageCalculation() => resistence * current;
+
     }
 }
 
